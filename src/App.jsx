@@ -1,5 +1,7 @@
+import GameBoard from './components/GameBoard';
+
 function App() {
-	return <div>Tic Tac Toe Game</div>;
+	return <GameBoard />;
 }
 
 export default App;
