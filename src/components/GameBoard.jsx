@@ -73,36 +73,34 @@ function GameBoard() {
 
 	return (
 		<div className='h-screen w-screen grid place-content-center p-5 bg-slate-400'>
-			<h1 className='text-4xl font-bold text-center text-white'>Tic Tac Toe</h1>
+			<h1 className='text-5xl font-extrabold text-center text-white'>Tic Tac Toe</h1>
 			<hr />
 
 			{draw && (
-				<h1 className='font-extrabold text-center text-3xl text-green-900 animate-bounce my-5'>
+				<h1 className='font-extrabold text-center text-4xl text-green-900 animate-bounce mt-8'>
 					Game draw!
 				</h1>
 			)}
 
 			{winner && (
-				<h1 className='font-extrabold text-center text-3xl text-green-900 animate-bounce my-5'>
+				<h1 className='font-extrabold text-center text-4xl text-green-900 animate-bounce mt-8'>
 					{winner} Won!
 				</h1>
 			)}
 
 			{playerType && (
-				<div className='flex gap-3 my-5'>
+				<div className='flex gap-3 mt-10'>
 					<p
 						className={`text-xl font-semibold text-white rounded-lg p-2 transition-all ${
 							playerType === 'P1' && 'bg-zinc-700'
 						}`}>
-						Player X:{' '}
-						{playerType === 'P1' && <span className='font-bold'>Your turn</span>}
+						Player X: {playerType === 'P1' && <span className='font-bold'>Move</span>}
 					</p>
 					<p
 						className={`text-xl font-semibold text-white rounded-lg p-2 transition-all ${
 							playerType === 'P2' && 'bg-zinc-700'
 						}`}>
-						Player O:{' '}
-						{playerType === 'P2' && <span className='font-bold'>Your turn</span>}
+						Player O: {playerType === 'P2' && <span className='font-bold'>Move</span>}
 					</p>
 				</div>
 			)}
